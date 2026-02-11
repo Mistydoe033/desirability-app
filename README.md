@@ -76,7 +76,7 @@ npm run dev
 
 Set `VITE_API_URL` if needed (default expected backend URL is `http://localhost:4000/`).
 
-## 7) Optional warmup precompute
+## 7) Optional precompute
 ```bash
 cd backend
 npm run precompute
@@ -108,7 +108,7 @@ Exception by design:
 - Frontend city autocomplete calls geocoding directly from `frontend/src/services/geo/geoService.ts`.
 
 ## Technical Choices
-- Thin resolvers; business logic isolated in services.
+- Thin resolvers; logic isolated in services.
 - Activity scorers are separated per activity with shared base aggregation.
 - SQLite used for durable state; Redis used for performance caches and lock flags.
 - Historical climate + POI + coastline signals feed yearly/profile scoring.
